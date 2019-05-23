@@ -26,3 +26,16 @@ Il va donc falloir gfaire intéragir `Four` et `Aliment`
 >- Quel objet je souhaite représenter ?
 >- Quelles fonctionnalités possède cet objet ?
  >- De quelles caractéristiques a besoin cet objet pour assurer ses fonctionnalités ?
+ 
+ 2. Utilisez un UML complet
+>Elaboration d'une première version de notre schéma UML et celui-ci va évoluer au fur et à mesure des chapitres.
+
+**Notre projet est une application de gestion de facture dans un magasin en ligne.**
+
+La base de notre projet, c'est la facture. Elle se compose :
+- de **produits** :
+    - > Pour pouvoir **regarder** ou **acheter** un produit, nous avons besoin de son **nom**, de sa **description** et de son **prix**.
+- **d'un client** :
+    - > En nous limitant au strict minimum, pour pouvoir **vendre** à un client en ligne, il nous faut **son nom complet** et son **adresse**.
+
+
