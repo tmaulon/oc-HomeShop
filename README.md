@@ -1,8 +1,8 @@
 # **Projet HomeShop**
 ## Ceci est un projet rélisé au fil du cours suivi sur [OpenClassrooms "Apprenez l’objet avec Java](https://openclassrooms.com/fr/courses/4989236-apprenez-l-objet-avec-java)" 
-
-### A - Concevez visuellement votre programme
-1. Un Objet c'est quoi ?
+### I. Débutez avec la programmation orientée objet
+#### 2- Concevez visuellement votre programme
+##### a. Un Objet c'est quoi ?
 
 Si vous prenez un four, par exemple, il possède avant tout une fonctionnalité : faire cuire des aliments. Pour mener à bien cette fonctionnalité, il possède des caractéristiques  :
 - Puissance : quantité en watts,
@@ -27,7 +27,7 @@ Il va donc falloir gfaire intéragir `Four` et `Aliment`
 >- Quelles fonctionnalités possède cet objet ?
  >- De quelles caractéristiques a besoin cet objet pour assurer ses fonctionnalités ?
  
- 2. Utilisez un UML complet
+##### b. Utilisez un UML complet
 >Elaboration d'une première version de notre schéma UML et celui-ci va évoluer au fur et à mesure des chapitres.
 
 **Notre projet est une application de gestion de facture dans un magasin en ligne.**
@@ -37,5 +37,13 @@ La base de notre projet, c'est la facture. Elle se compose :
     - > Pour pouvoir **regarder** ou **acheter** un produit, nous avons besoin de son **nom**, de sa **description** et de son **prix**.
 - **d'un client** :
     - > En nous limitant au strict minimum, pour pouvoir **vendre** à un client en ligne, il nous faut **son nom complet** et son **adresse**.
+    
+#### 3- Découvrez les visibilités
+ Il existe 4 types de visibilités :
+ - `private` : uniquement accessible dans la classe ;
+ - `public` : accessible partout ;
+ - ""   (rien) : accessible dans le package ;
+ - `protected` : nous verrons ce type plus tard.
+
 
 

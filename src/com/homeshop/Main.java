@@ -12,7 +12,7 @@ public class Main {
         cake.estCuit = false;
         cake.manger();
         System.out.println("");
-        grandFour.cuire(cake);
+        grandFour.cuire(cake, 180, 60);
         System.out.println("");
         cake.manger();
 
