@@ -1,5 +1,5 @@
 # **Projet HomeShop**
-## Ceci est un projet rélisé au fil du cours suivi sur [OpenClassrooms "Apprenez l’objet avec Java](https://openclassrooms.com/fr/courses/4989236-apprenez-l-objet-avec-java)" 
+## Ceci est un projet rélisé au fil du cours suivi sur [OpenClassrooms "Apprenez l’objet avec Java"](https://openclassrooms.com/fr/courses/4989236-apprenez-l-objet-avec-java) 
 ### I. Débutez avec la programmation orientée objet
 #### 2- Concevez visuellement votre programme
 ##### a. Un Objet c'est quoi ?
@@ -75,9 +75,21 @@ Attention à ne pas confondre **Interface** et **Class** :
 
 
 ##### b. Conception de la livraison
-Ajout d'un **Système de livraison**
+##### Ajout d'un **Système de livraison**
+
+Pour une facture => Un moyen de livraison
+
+Moyens de livraison : 
+- Livraison à domicile : prix toujours le même = 4.99€
+- Livraison à domicile express 24h :  prix dans Paris = 6.99€ & prix dehors de Paris = 9.99€
+- Livraison en point relais : identifiés par un numéro : 
+    - 1 à 22 : gratuits 
+    - 23 à 47 : 2.99€ 
+    - autres : 4.99€ 
+- Retrait gratuit à l'entrepôt dans Paris
 
 ##### c. Implémentation de la livraison
+mplémentation de tests pour les logiques contenus dans ``ExpressDelivery``  et  ``RelayDelivery``
 
 #### 4- Générez une facture
 #### 5- Générez votre première exception
