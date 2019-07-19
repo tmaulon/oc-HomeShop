@@ -7,9 +7,9 @@ public class Main {
         Television tv = new Television("TV Samsung UE49MU6292", "Smart TV LED incurvée 49\"", 599, 49, "LED");
         Fridge fridge = new Fridge("BEKO TSE 1042 F", "Réfrigérateur BEKO 130L - Classe A+ - blanc", 189, 130, false);
 
-        Customer customer = new Customer("Juste Leblanc", "19 rue Germain Pilon, Paris");
+        Client client = new Client("Juste Leblanc", "19 rue Germain Pilon, Paris");
 
-        Bill bill = new Bill(customer);
+        Bill bill = new Bill(client);
         bill.addProduct(cafe, 1);
         bill.addProduct(tv, 1);
         bill.addProduct(fridge, 1);

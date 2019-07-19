@@ -3,11 +3,11 @@ package com.homeshop;
 import java.util.Map;
 
 public class Bill {
-    private Customer customer;
+    private Client client;
     private Map<Product, Integer> products;
 
-    public Bill(Customer customer) {
-        this.customer = customer;
+    public Bill(Client client) {
+        this.client = client;
     }
 
     /**
@@ -19,8 +19,8 @@ public class Bill {
         this.products.put(product, quantity);
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Client getClient() {
+        return client;
     }
 
     public Map<Product, Integer> getProducts() {
