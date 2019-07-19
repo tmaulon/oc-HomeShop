@@ -1,10 +1,10 @@
 package com.homeshop;
 
-public class Client {
+public class Customer {
     private String fullname;
     private String address;
 
-    public Client(String fullname, String address) {
+    public Customer(String fullname, String address) {
         this.fullname = fullname;
         this.address = address;
     }

@@ -92,6 +92,28 @@ Moyens de livraison :
 mplémentation de tests pour les logiques contenus dans ``ExpressDelivery``  et  ``RelayDelivery``
 
 #### 4- Générez une facture
+
+##### a. La méthode generate()
+>Génerer une facture dans un fichier
+
+Nouvelles fonctions : ``generate`` & ``getTotal``
+
+##### b. Un Mock
+Implémentation des **tests** pour les fonctions ``generate`` & ``getTotal``
+
+Pour tester  ``generate`` , nous allons créer un faux  ``Writer``  : un  ``Writer``  qui n'écrit rien du tout, mais qui **stocke** ce qu'il doit écrire. Cela sera beaucoup plus simple pour tester. 
+
+On appelle cela un **Mock**.
+
+Cas d'exceptions ou on peut écrire des tests de différents classes dans un même fichier :
+- **Les inner classes** : ce sont des classes **déclarées dans d'autres**. (Plutôt rare)
+- **les classes anonymes** : (le cas ici) Cela consiste à faire un **héritage** dans le code, **sans créer de nouvelle classe**. On change le comportement de base de la classe sans en créer une nouvelle.
+
+##### c. Le code de generate et getTotal
+
+##### d. Un outil bien pratique
+
+
 #### 5- Générez votre première exception
 
 
