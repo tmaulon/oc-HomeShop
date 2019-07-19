@@ -46,4 +46,40 @@ La base de notre projet, c'est la facture. Elle se compose :
  - `protected` : nous verrons ce type plus tard.
 
 
+...
+
+### II. Allez plus loin avec la programmation orientée objet
+
+#### 1- Découvrez l'héritage
+> Spécialisation
+...
+
+#### 2- Utilisez le polymorphisme
+##### a. Généralisation
+##### b. Surcharge
+##### c. Classe abstraite
+
+#### 3- Concevez une interface
+##### a. Un contrat
+>Qu'est-ce qu'un contrat ? <br>
+Pour faire simple, on peut dire que c'est un **accord entre plusieurs parties** : "J'effectue telle action pour toi. En contrepartie, tu effectues telle action pour moi."
+
+En développement, ce concept se représente via une **interface**. Quand vous travaillez avec d'autres développeurs, vous avez des interactions. Vous allez souvent vous retrouver en train de dire : "Tiens, je passe tel paramètre à ta méthode ; elle doit faire ça pour moi."
+
+On utilise le mot ``implements`` pour utiliser une interface. Quand on utilise  ``implements`` , Java nous oblige à  ``Override``  chaque méthode de l'interface.
+
+>NB. : **Une interface ne peut pas être instanciée.** <br>
+Attention à ne pas confondre **Interface** et **Class** :
+>- Interface : une interface est un contrat. Elle sert à spécifier un comportement attendu sans préciser le code de ce comportement.
+>- Class : une classe définit le code d'un comportement. C'est dans une classe que l'on trouve le code servant à faire fonctionner votre application.
+
+
+##### b. Conception de la livraison
+Ajout d'un **Système de livraison**
+
+##### c. Implémentation de la livraison
+
+#### 4- Générez une facture
+#### 5- Générez votre première exception
+
 
