@@ -110,10 +110,22 @@ Cas d'exceptions ou on peut écrire des tests de différents classes dans un mê
 - **les classes anonymes** : (le cas ici) Cela consiste à faire un **héritage** dans le code, **sans créer de nouvelle classe**. On change le comportement de base de la classe sans en créer une nouvelle.
 
 ##### c. Le code de generate et getTotal
+...
 
 ##### d. Un outil bien pratique
-
+...
 
 #### 5- Générez votre première exception
+##### a. Plusieurs types d'exceptions
+2 types d'exceptions :
+- certaines que l'on est **obligé de catcher**  : la classe **Exception et ses enfants**. Exemples : FileNotFoundException, UnknownServiceException ...
+- d'autres que l'on catche **si l'on veut** : même si la classe ``RuntimeException`` est un enfant d'Exception, on est pas obligé de catcher une  ``RuntimeException``.Exemples : NumberFormatException, IllegalArgumentException, IllegalStateException ...
+
+Pour **lancer** une exception, il suffit d'utiliser le mot clé ``throw`` .
+
+##### b. Vos exceptions
+On peut utiliser les types d'exceptions **déjà présents dans Java**. Cependant, il est souvent plus judicieux de créer **ses propres types d'exceptions**.
+
+Le gros intérêt d'utiliser son propre type d'exception est d'avoir une information claire pour les développeurs avec la ligne ``catch (NoProductInBillException e)`` . Un autre développeur comprendra immédiatement **le type de souci** qu'il peut y avoir à cet endroit du code.
 
 

@@ -30,7 +30,7 @@ public class BillTest {
 
     @Test
     public void Given_2productsAndDelivery_When_generatingBill_Then_getGoodLineNumber() {
-        Bill bill = new Bill(customer, lowCostRelayDelivery);
+        Bill bill = new Bill(customer, lowCostRelayDelivery, cafe);
         bill.addProduct(cafe, 1);
         bill.addProduct(tv, 1);
         bill.generate(writerMock);
@@ -40,10 +40,16 @@ public class BillTest {
 
     @Test
     public void Given_3productsAndDelivery_When_generatingBill_Then_getGoodTotal() {
-        Bill bill = new Bill(customer, lowCostRelayDelivery);
+        Bill bill = new Bill(customer, lowCostRelayDelivery, cafe);
         bill.addProduct(cafe, 1);
         bill.addProduct(tv, 1);
         bill.addProduct(fridge, 1);
         assertEquals(870.98, bill.getTotal(), 0.01);
+    }
+
+    @Test
+    public void Given_emptyProductList_generatingBill_Then_throwsException() {
+        Bill bill = new Bill(customer, lowCostRelayDelivery, cafe);
+        assertThrows(NoProductInBillException.class, () -> bill.generate(writerMock));
     }
 }
