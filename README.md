@@ -128,4 +128,49 @@ On peut utiliser les types d'exceptions **déjà présents dans Java**. Cependan
 
 Le gros intérêt d'utiliser son propre type d'exception est d'avoir une information claire pour les développeurs avec la ligne ``catch (NoProductInBillException e)`` . Un autre développeur comprendra immédiatement **le type de souci** qu'il peut y avoir à cet endroit du code.
 
+### III. Démarrez votre premier projet web
+#### 1- Créez votre premier projet web
+Ajout d'une interface web devant ce projet.
 
+##### a.Client / Serveur et HTTP
+Quand vous indiquez une adresse web à votre navigateur, celui-ci va envoyer un **message** à un **ordinateur distant (=serveur)**. Le message est une simple chaîne de caractères qui respecte un **protocole** bien défini.
+
+##### b.Servlet
+**Java EE : Java Enterprise Edition**
+
+Outils destinés à des applications de plus grande envergure : des applications pour les entreprises !
+
+La plupart des outils inclus dans **Java EE** sont destinés aux **applications web, réseaux et distribuées**. 
+
+Nous allons nous concentrer sur un outil de Java EE nommé **Servlet**. Les HttpServlet  permettent de gérer le protocole HTTP. C'est une simple **classe dont il faut hériter** pour pouvoir générer une page web.
+
+**Ajout des Servlet de Java EE à nos dépendances via Maven.** 
+
+Création d'un *package web** et d'un classe à l'interieur ``HelloWorldServlet``
+=> Faire hériter cette classe de ``HttpServlet`` et override la methode ``doGet``
+
+Les paramètres représentent :
+
+``HttpServletRequest req``  : la requête HTTP reçue par votre serveur (par exemple le message GET de la première partie).
+
+``HttpServletResponse resp``  : un objet permettant d'envoyer la réponse.`
+
+> L'objet  ``resp``  possède un attribut  ``writer``  auquel on peut accéder via un `**getter`**. Cet attribut est lui-même un objet de type ``PrintWriter``. On peut l'utiliser comme  ``Systeme.out`` et donc faire  ``println`` .
+
+**Donc, les Servlet sont des composants techniques permettant de matérialiser une requête et une réponse.**
+
+##### c.Un conteneur
+Pour créer un objet  ``HelloWorldServlet`` , puis d'alimenter  ``rep``  et  ``resp``, c'est un **serveur d'application** web Java qui va s'en occuper.
+ Plus exactement un **conteneur de Servlet** : c'est un programme qui va se charger de récupérer les messages HTTP. En fonction du contenu du message, le serveur utilisera la bonne Servlet : Il existe de nombreux conteneurs : Apache Tomcat, Eclipse Jetty, WildFly, etc.
+ 
+ Ici, nous allons utiliser **Eclipse Jetty**. C'est un serveur ultra léger, gratuit, libre, multiplateforme et complet qu'il est même possible d'**embarquer** avec l'application !
+
+##### d.Dernière étape
+Il reste une dernière étape pour qu'un projet Java soit reconnu comme un projet web. Il y a 2 modifications à faire. La première consiste seulement à ajouter la balise  ``<packaging>war</packaging>``  au **pom.xml** : 
+> Les projets web en Java portent l'extention **.war** et non .jar. 
+
+La deuxième modification va servir à **configurer la version des Servlet** utilisée. On va ajouter un nouveau fichier que Jetty va utiliser pour savoir comment travailler avec votre application.
+
+Dans le dossier **main** : nouveau dossier **webapp** => sert à stocker tous les fichiers relatifs au site web (image, feuille de style, etc.).
+Dans ce dossier, ajouter un dossier **WEB-INF** => sert à préciser la configuration de l'application web.
+Et dedans, créer un fichier **web.xml** => sert à indiquer **où sont nos Servlet et à quelle URL les relier**.
